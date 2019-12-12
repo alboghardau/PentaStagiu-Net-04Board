@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PentaStagiuNet-Tema04", "PentaStagiuNet-Tema04\PentaStagiuNet-Tema04.csproj", "{CBD2935E-5DA2-45D2-A03B-B6342B2C0FAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBD2935E-5DA2-45D2-A03B-B6342B2C0FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBD2935E-5DA2-45D2-A03B-B6342B2C0FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBD2935E-5DA2-45D2-A03B-B6342B2C0FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBD2935E-5DA2-45D2-A03B-B6342B2C0FAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BE79B1A9-E1B9-4E60-8956-FCA75C9597E5}
+	EndGlobalSection
+EndGlobal
