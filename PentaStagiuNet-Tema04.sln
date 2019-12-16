@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PentaStagiuNet-Tema04", "PentaStagiuNet-Tema04\PentaStagiuNet-Tema04.csproj", "{CBD2935E-5DA2-45D2-A03B-B6342B2C0FAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardLibrary", "BoardLibrary\BoardLibrary.csproj", "{9A68B9DF-1E49-4405-9819-FA43D7C5C899}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CBD2935E-5DA2-45D2-A03B-B6342B2C0FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBD2935E-5DA2-45D2-A03B-B6342B2C0FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBD2935E-5DA2-45D2-A03B-B6342B2C0FAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A68B9DF-1E49-4405-9819-FA43D7C5C899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A68B9DF-1E49-4405-9819-FA43D7C5C899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A68B9DF-1E49-4405-9819-FA43D7C5C899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A68B9DF-1E49-4405-9819-FA43D7C5C899}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
