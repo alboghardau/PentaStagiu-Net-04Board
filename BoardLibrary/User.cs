@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace BoardLibrary
 {
-    public class User
+    public class User : Person
     {
+        int id = 1;
         string username { get; set; }
         string email { get; set; }
-        string firstName { get; set; }
-        string lastName { get; set; }
+
 
         //overloading... In case partial atributes
         public User()
@@ -20,10 +20,10 @@ namespace BoardLibrary
         }
         public User(string username, string email, string firstName, string lastName)
         {
+            this.id = this.id++;
             this.username = username;
             this.email = email;
-            this.firstName = firstName;
-            this.lastName = lastName;
+
         }        
     }
 

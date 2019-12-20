@@ -10,7 +10,6 @@ namespace BoardLibrary
     {
         User author { get; set; }
         DateTime postDate { get; }
-
         string content { get; set; }
 
         //Date taken on instance construction
