@@ -8,22 +8,17 @@ namespace BoardLibrary
 {
     public class User : Person
     {
-        int id = 1;
-        string username { get; set; }
-        string email { get; set; }
+        int Id = 1;
+        string Username { get; set; }
+        string Email { get; set; }
 
 
-        //overloading... In case partial atributes
-        public User()
+        public User(string username, string email, string firstName, string lastName, DateTime birthDate)
+            : base(firstName, lastName, birthDate)
         {
-
-        }
-        public User(string username, string email, string firstName, string lastName)
-        {
-            this.id = this.id++;
-            this.username = username;
-            this.email = email;
-
+            this.Id = this.Id++;
+            this.Username = username;
+            this.Email = email;
         }        
     }
 

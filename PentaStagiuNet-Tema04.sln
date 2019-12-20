@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardApp", "PentaStagiuNet-
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoardLibrary", "BoardLibrary\BoardLibrary.csproj", "{9A68B9DF-1E49-4405-9819-FA43D7C5C899}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniversityLibrary", "UniversityLibrary\UniversityLibrary.csproj", "{937FBAD0-8C3D-4B51-88BF-EA7731C964ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9A68B9DF-1E49-4405-9819-FA43D7C5C899}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A68B9DF-1E49-4405-9819-FA43D7C5C899}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A68B9DF-1E49-4405-9819-FA43D7C5C899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{937FBAD0-8C3D-4B51-88BF-EA7731C964ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{937FBAD0-8C3D-4B51-88BF-EA7731C964ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{937FBAD0-8C3D-4B51-88BF-EA7731C964ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{937FBAD0-8C3D-4B51-88BF-EA7731C964ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

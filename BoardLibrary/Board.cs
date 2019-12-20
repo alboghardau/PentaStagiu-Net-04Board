@@ -12,6 +12,7 @@ namespace BoardLibrary
         private static readonly Board instance = new Board();
         List<Post> postList = new List<Post>();
         List<User> userList = new List<User>();
+        User loggedUser;
 
         static Board()
         {

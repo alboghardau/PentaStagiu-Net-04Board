@@ -8,23 +8,32 @@ namespace BoardLibrary
 {
     public class Person
     {
-        string firstName { get; set; }
-        string lastName { get; set; }
-        DateTime birthDate { get; set; }
+        private string FirstName { get; set; }
+        private string LastName { get; set; }
+        public DateTime BirthDate { get; set; }
 
-        public int Age
+
+        public Person(string firstName, string lastName, DateTime birthDate)
         {
-            get
-            {
-                DateTime today = DateTime.Now;
-                int age = today.Year - birthDate.Year;
-                if (birthDate > today.AddYears(-age))
-                {
-                    age--;
-                }
-                return age;
-            }
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.BirthDate = birthDate;
+
         }
 
+
+        //public int Age
+        //{
+        //    get
+        //    {
+        //        DateTime today = DateTime.Now;
+        //        int age = today.Year - this.BirthDate.Year;
+        //        if (this.BirthDate > today.AddYears(-age))
+        //        {
+        //            age--;
+        //        }
+        //        return age;
+        //    }
+        //}
     }
 }

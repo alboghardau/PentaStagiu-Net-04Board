@@ -21,7 +21,6 @@ namespace BoardApp
 
         public static void PrintSpace()
         {
-        //  Console.WriteLine("####################################################");
             Console.WriteLine("                                                    ");
         }
     }

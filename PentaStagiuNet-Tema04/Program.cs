@@ -12,24 +12,27 @@ namespace BoardApp
         static void Main(string[] args)
         {
             string command = null;
+            bool condition = true;
 
-            while (true)
+            while (condition)
             {
                 BoardMessages.InitMsg();
                 command = Console.ReadLine();
-                ExecuteCommand(command);
+                condition = ExecuteCommand(command);
                 BoardMessages.PrintSpace();
             }
         }
 
-        private static void ExecuteCommand(string command)
+        private static bool ExecuteCommand(string command)
         {
             switch (command)
             {
                 case "REG":
-                    break;
+                    return true;
                 case "EXIT":
-                    return;
+                    return false;
+                default:
+                    return true;
             }
         }
     }
