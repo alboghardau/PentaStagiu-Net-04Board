@@ -16,7 +16,7 @@ namespace BoardApp
             Console.WriteLine("NEWPOST - Create new post");
             Console.WriteLine("READ - Display board posts");
             Console.WriteLine("EXIT - Exit app");
-            Console.Write("COMMAND: ");
+            
         }
 
         public static void PrintSpace()

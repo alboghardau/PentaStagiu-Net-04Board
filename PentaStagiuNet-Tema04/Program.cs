@@ -13,26 +13,45 @@ namespace BoardApp
         {
             string command = null;
             bool condition = true;
+            UserService userService = new UserService();
+            PostService postService = new PostService();
 
-            while (condition)
+            BoardMessages.InitMsg();
+            BoardMessages.PrintSpace();
+
+            while (true)
             {
-                BoardMessages.InitMsg();
-                command = Console.ReadLine();
-                condition = ExecuteCommand(command);
+                Console.Write("COMMAND: ");
+                switch (Console.ReadLine())
+                {
+                    case "REG":
+                        BoardMessages.PrintSpace();
+                        new RegisterApp(userService);
+                        break;
+
+                    case "LOG":
+                        BoardMessages.PrintSpace();
+
+                        break;
+
+                    case "NEWPOST":
+                        BoardMessages.PrintSpace();
+                        break;
+
+                    case "READ":
+                        BoardMessages.PrintSpace();
+                        break;
+
+                    case "EXIT":
+                        Board.Instance.SaveData();
+                        return;
+
+                    default:
+                        Console.WriteLine("ERROR : Wrong command!");
+                        break;
+                }
+
                 BoardMessages.PrintSpace();
-            }
-        }
-
-        private static bool ExecuteCommand(string command)
-        {
-            switch (command)
-            {
-                case "REG":
-                    return true;
-                case "EXIT":
-                    return false;
-                default:
-                    return true;
             }
         }
     }

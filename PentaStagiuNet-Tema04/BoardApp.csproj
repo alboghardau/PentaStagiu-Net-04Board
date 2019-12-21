@@ -59,6 +59,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BoardMessages.cs" />
+    <Compile Include="LoginApp.cs" />
+    <Compile Include="RegisterApp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

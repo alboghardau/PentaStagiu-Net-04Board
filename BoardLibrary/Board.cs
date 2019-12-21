@@ -11,16 +11,16 @@ namespace BoardLibrary
     public class Board
     {
         private static Board instance = null;
-        private List<Post> PostList { get; set; }
-        private List<User> UserList {get; set; }
-        User LoggedUser { get; set; }
+        public List<Post> PostList { get; set; }
+        public List<User> UserList { get; set; }
+        public User LoggedUser { get; set; }
 
         private Board()
         {
             this.PostList = new List<Post>();
             this.UserList = new List<User>();
 
-            //LOARD BOARD DATA FROM XML
+            //LOAD BOARD DATA FROM XML
             try
             {
                 this.PostList = XmlSerialization.ReadFromXmlFile<List<Post>>("posts.xml");
@@ -49,6 +49,6 @@ namespace BoardLibrary
         {
             XmlSerialization.WriteToXmlFile<List<Post>>("posts.xml", instance.PostList);
             XmlSerialization.WriteToXmlFile<List<User>>("users.xml", instance.UserList);
-        }               
+        }   
     }
 }

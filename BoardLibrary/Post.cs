@@ -8,9 +8,9 @@ namespace BoardLibrary
 {
     public class Post
     {
-        User author { get; set; }
-        DateTime postDate { get; }
-        string content { get; set; }
+        public User author { get; set; }
+        public DateTime postDate { get; }
+        public string content { get; set; }
 
         //Date taken on instance construction
         public Post()
