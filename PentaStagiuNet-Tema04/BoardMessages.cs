@@ -11,12 +11,14 @@ namespace BoardApp
         public static void InitMsg()
         {
             Console.WriteLine("Enter one of the follwing board commands:");
+            Console.WriteLine("##########################################");
             Console.WriteLine("REG - Register user");
             Console.WriteLine("LOGIN - Login user");
             Console.WriteLine("NEWPOST - Create new post");
             Console.WriteLine("READ - Display board posts");
             Console.WriteLine("EXIT - Exit app");
-            
+            Console.WriteLine("##########################################");
+
         }
 
         public static void PrintSpace()

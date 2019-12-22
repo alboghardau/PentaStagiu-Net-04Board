@@ -6,39 +6,60 @@ using System.Threading.Tasks;
 
 namespace BoardLibrary
 {
-    public class UserService
+    public class UserService : IUserService
     {
-        Board board;
+        private List<User> userList;
+        private User loggedUser = null;
 
-        public UserService(){
-            board = Board.Instance;            
+        //READ DATA FROM XML OR NEW LIST INSTANCE IN CONSTRUCTOR
+        public UserService()
+        { 
+            try
+            {
+                this.userList = XmlSerialization.ReadFromXmlFile<List<User>>("users.xml");
+            }
+            catch(Exception e)
+            {
+                this.userList = new List<User>();
+                Console.WriteLine("###FAILED TO LOAD XML DATA!###");
+            }
         }
 
-        public void AddUser(User user)
+        //SAVE XML DATA IN DESTRUCTOR
+        ~UserService()
         {
-            board.UserList.Add(user);
+            XmlSerialization.WriteToXmlFile("users.xml", this.userList);
+        }
+
+        public User AddUser(User user)
+        {
+            this.userList.Add(user);
+            return user;
         }
 
         public List<User> GetUsers()
         {
-            return board.UserList;
+            return this.userList;
         }
 
-        public void DeleteUserById(int id)
+        public bool LoginUser(string username)
         {
-            board.UserList.ForEach(user =>
+            foreach(User user in userList)
             {
-                if(user.Id == id)
+                if (user.Username.Equals(username))
                 {
-                    board.UserList.Remove(user);
+                    this.loggedUser = user;
+                    return true;
                 }
-            });
+            }
+            return false;
         }
 
-        public void LogUser(User user)
+        public User GetLoggedUser()
         {
-            board.LoggedUser = user;
+            return this.loggedUser;
         }
+
    
     }
 }

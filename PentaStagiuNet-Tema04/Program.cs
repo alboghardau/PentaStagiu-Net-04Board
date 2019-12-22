@@ -9,12 +9,11 @@ namespace BoardApp
 {
     class Program
     {
+        private static Board board;
+
         static void Main(string[] args)
         {
-            string command = null;
-            bool condition = true;
-            UserService userService = new UserService();
-            PostService postService = new PostService();
+            board = new Board(new UserService(), new PostService());
 
             BoardMessages.InitMsg();
             BoardMessages.PrintSpace();
@@ -25,8 +24,7 @@ namespace BoardApp
                 switch (Console.ReadLine())
                 {
                     case "REG":
-                        BoardMessages.PrintSpace();
-                        new RegisterApp(userService);
+                        new RegisterApp(board);
                         break;
 
                     case "LOG":
@@ -42,8 +40,7 @@ namespace BoardApp
                         BoardMessages.PrintSpace();
                         break;
 
-                    case "EXIT":
-                        Board.Instance.SaveData();
+                    case "EXIT":                        
                         return;
 
                     default:

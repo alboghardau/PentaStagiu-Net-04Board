@@ -9,7 +9,7 @@ namespace BoardApp
 {
     class LoginApp
     {
-        public LoginApp(UserService service)
+        public LoginApp(Board board)
         {
             Post post = new Post();
 
@@ -17,7 +17,6 @@ namespace BoardApp
             string username = Console.ReadLine();
 
 
-          
         }
 
     }

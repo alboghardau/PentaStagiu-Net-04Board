@@ -12,8 +12,13 @@ namespace BoardApp
     {
         private User user;
 
-        public RegisterApp(UserService service) {
+        public RegisterApp(Board board) {
             user = new User();
+
+            BoardMessages.PrintSpace();
+            Console.WriteLine("##########################################");
+            Console.WriteLine("REGISTER NEW USER");
+            Console.WriteLine("##########################################");
 
             Console.Write("Username:");
             this.user.Username = Console.ReadLine();
@@ -50,7 +55,7 @@ namespace BoardApp
                 }
             }
 
-            service.AddUser(user);
+            board.AddUser(user);
         }
     }
 }
