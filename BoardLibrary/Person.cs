@@ -13,31 +13,15 @@ namespace BoardLibrary
         public string LastName { get; set; }
         public DateTime BirthDate { get; set; }
 
+        //Empty constructor, useing getters/setters
         public Person()
         {
 
         }
-        public Person(string firstName, string lastName, DateTime birthDate)
+
+        public string GetFullName()
         {
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.BirthDate = birthDate;
+            return this.FirstName + " " + this.LastName;
         }
-
-
-
-        //////////public int age
-        //////////{
-        //////////    get
-        //////////    {
-        //////////        datetime today = datetime.now;
-        //////////        int age = today.year - this.birthdate.year;
-        //////////        if (this.birthdate > today.addyears(-age))
-        //////////        {
-        //////////            age--;
-        //////////        }
-        //////////        return age;
-        //////////    }
-        //////////}
     }
 }

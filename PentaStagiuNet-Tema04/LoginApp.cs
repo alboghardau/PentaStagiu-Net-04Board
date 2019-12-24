@@ -11,13 +11,25 @@ namespace BoardApp
     {
         public LoginApp(Board board)
         {
-            Post post = new Post();
+            BoardMessages.PrintSpace();
+            Console.WriteLine("##########################################");
+            Console.WriteLine("LOGIN");
+            Console.WriteLine("##########################################");
 
-            Console.Write("Username:");
-            string username = Console.ReadLine();
+            Console.Write("Email: ");
+            string email = Console.ReadLine();
 
-
+            Console.Write("Passwrod: ");
+            string password = Console.ReadLine();
+            
+            if (board.LoginUser(email, password))
+            {
+                Console.WriteLine("Login succesful!");
+            }
+            else
+            {
+                Console.WriteLine("Login failed! Please try again!");
+            }
         }
-
     }
 }

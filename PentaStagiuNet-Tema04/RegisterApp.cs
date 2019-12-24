@@ -20,11 +20,20 @@ namespace BoardApp
             Console.WriteLine("REGISTER NEW USER");
             Console.WriteLine("##########################################");
 
-            Console.Write("Username:");
-            this.user.Username = Console.ReadLine();
-            
-            Console.Write("E-mail:");
-            this.user.Email = Console.ReadLine();
+            //Validate email
+            while (true)
+            {
+                Console.Write("E-mail (only .com accepted) :");
+                string email = Console.ReadLine();
+                if (email.Contains("@") && email.Contains(".com"))
+                {
+                    this.user.Email = email;
+                    break;
+                }
+            }
+
+            Console.Write("Password:");
+            this.user.Password = Console.ReadLine();
 
             Console.Write("First Name:");
             this.user.FirstName = Console.ReadLine();
@@ -32,6 +41,7 @@ namespace BoardApp
             Console.Write("Last Name:");
             this.user.LastName = Console.ReadLine();
 
+            //VALIDATE DATE FORMAT
             while (true)
             {
                 try

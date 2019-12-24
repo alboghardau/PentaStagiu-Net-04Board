@@ -8,7 +8,6 @@ namespace BoardLibrary
 {
     public class PostService : IPostService
     {
-        Board board;
         private List<Post> postList;
 
         //READ DATA FROM XML OR NEW LIST INSTANCE IN CONSTRUCTOR
@@ -34,6 +33,12 @@ namespace BoardLibrary
         {
             this.postList.Add(post);
             return post;
+        }
+
+        public List<Post> GetPostList()
+        {
+            this.postList.Sort();
+            return this.postList;
         }
     }
 }

@@ -42,15 +42,23 @@ namespace BoardLibrary
             return this.userList;
         }
 
-        public bool LoginUser(string username)
+        public bool LoginUser(string email, string password)
         {
             foreach(User user in userList)
             {
-                if (user.Username.Equals(username))
+                try
                 {
-                    this.loggedUser = user;
-                    return true;
+                    if (user.Password.Equals(password) && user.Email.Equals(email))
+                    {
+                        this.loggedUser = user;
+                        return true;
+                    }
                 }
+                catch (Exception e)
+                {
+                    
+                }
+
             }
             return false;
         }

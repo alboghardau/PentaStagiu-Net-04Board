@@ -10,7 +10,7 @@ namespace BoardLibrary
     {
         User AddUser(User user);
         List<User> GetUsers();
-        bool LoginUser();
+        bool LoginUser(string email, string password);
         User GetLoggedUser();
     }
 }

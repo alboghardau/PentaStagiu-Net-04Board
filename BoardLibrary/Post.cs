@@ -6,22 +6,21 @@ using System.Threading.Tasks;
 
 namespace BoardLibrary
 {
-    public class Post
+    public class Post : IComparable<Post>
     {
-        public User author { get; set; }
-        public DateTime postDate { get; }
-        public string content { get; set; }
+        public User Author { get; set; }
+        public DateTime PostDate { get; set; }
+        public string Content { get; set; }
 
-        //Date taken on instance construction
+        ////Empty constructor, useing getters/setters
         public Post()
         {
-            this.postDate = DateTime.Now;
+
         }
 
-        public Post(User author, string content) : this()
+        public int CompareTo(Post other)
         {
-            this.author = author;
-            this.content = content;
+            return other.PostDate.Ticks.CompareTo(this.PostDate.Ticks);
         }
     }
 }

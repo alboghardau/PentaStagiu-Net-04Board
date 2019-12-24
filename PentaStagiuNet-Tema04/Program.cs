@@ -20,27 +20,30 @@ namespace BoardApp
 
             while (true)
             {
+                if(board.GetLoggedUser() != null)
+                {
+                    Console.WriteLine("Logged in as: " + board.GetLoggedUser().GetFullName());
+                }
                 Console.Write("COMMAND: ");
                 switch (Console.ReadLine())
                 {
-                    case "REG":
+                    case "reg":
                         new RegisterApp(board);
                         break;
 
-                    case "LOG":
-                        BoardMessages.PrintSpace();
-
+                    case "login":
+                        new LoginApp(board);
                         break;
 
-                    case "NEWPOST":
-                        BoardMessages.PrintSpace();
+                    case "new":
+                        new PostApp(board);
                         break;
 
-                    case "READ":
-                        BoardMessages.PrintSpace();
+                    case "read":
+                        new ReadApp(board);
                         break;
 
-                    case "EXIT":                        
+                    case "exit":                        
                         return;
 
                     default:

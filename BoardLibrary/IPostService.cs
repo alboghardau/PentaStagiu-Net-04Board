@@ -9,6 +9,6 @@ namespace BoardLibrary
     public interface IPostService
     {
         Post AddPost(Post post);
-
+        List<Post> GetPostList();
     }
 }

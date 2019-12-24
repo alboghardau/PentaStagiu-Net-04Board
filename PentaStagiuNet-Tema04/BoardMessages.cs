@@ -12,11 +12,11 @@ namespace BoardApp
         {
             Console.WriteLine("Enter one of the follwing board commands:");
             Console.WriteLine("##########################################");
-            Console.WriteLine("REG - Register user");
-            Console.WriteLine("LOGIN - Login user");
-            Console.WriteLine("NEWPOST - Create new post");
-            Console.WriteLine("READ - Display board posts");
-            Console.WriteLine("EXIT - Exit app");
+            Console.WriteLine("reg - Register user");
+            Console.WriteLine("login - Login user");
+            Console.WriteLine("newpost - Create new post");
+            Console.WriteLine("read - Display board posts");
+            Console.WriteLine("exit - Exit app and save data");
             Console.WriteLine("##########################################");
 
         }
